@@ -1,0 +1,99 @@
+			      EE 109 - Fall 2021
+			  Lab 2 - Scopes and Signals
+
+Edit the document below to fill your answers from the exercises done in lab.
+Be sure to include the proper units, such as "1 kHz", or "200 msec"
+
+Note: Don't use special characters like Greek "mu" or "Omega" symbols in your
+answers.  These don't display correctly on Vocareum and can make it hard to
+grade the answers.  For example, if you need to specify units of microseconds,
+just type "microseconds" or "usecs".
+
+
+1. (5 points) Fill out the following table for outputs A0 and A1. The duty
+cycle of a signal is the ratio (expressed as a percentage) of the time the
+signal is in the high state to the period of the signal.
+
+    Bit  Time in 1 state   Time in 0 state    Period    Frequency    Duty cycle
+
+    A0       1.00ms             1.16ms        2.16ms      463Hz         0.537
+
+    A1       6.60ms             0.94ms        7.54ms      133Hz         0.875
+
+
+
+2. (2 points) What is the range of the width of the A2 pulse that you observed?
+
+    Narrowest:     0.330ms
+
+    Widest:        3.000ms
+
+
+3. (2 points) What is the approximate time delay from the input to the output
+of the NOT gate?
+
+        7.5 nanoseconds
+
+4. (5 points) Fill in the table below with the input voltages to the 74HCT04
+inverter and the resulting output voltage,
+
+   Input voltage        Output voltage
+        0.0                  4.99V
+        0.2                  4.99V
+        0.4                  4.99V
+        0.6                  4.99V
+        0.8                  4.99V
+        1.0                  4.99V
+	1.1                  4.99V
+        1.2                  4.98V
+	1.3                   0V
+        1.4                   0V
+	1.5                   0V
+        1.6                   0V
+        1.8                   0V
+        2.0                   0V
+        3.0                   0V
+        4.0                   0V
+        5.0                   0V
+
+
+
+			  ---- Review Questions ----
+
+1. (3 points) Suppose you wanted to measure the frequency of a note played by
+a piano and sensed from a microphone connected/viewed on an oscilloscope.
+Answer the following True/False questions with a brief explanation.
+
+     a. True/False: To measure the frequency, the vertical scale of the
+     oscilloscope would be of more use than the horizontal scale.
+     False. Frequency is a measure of the Period, which is observed through the
+     horizontal scale.
+
+     b. True/False: Since the note is played for a short time period, we
+     should set the triggering to "Single" rather than "Run".
+     True. We want to capture the large change in voltage instead of observing the
+     voltage pattern.
+
+     c. True/False: If the signal ranges between 0V and 2.5V, the trigger
+     level should ideally be set around 1.25V.
+     True. 1.25V is set in the middle of the signal range, and thus the
+     oscilloscope should be centered about the point in which the voltage changes.
+
+
+2. (2 points) Each scope probe has a short black ground wire attached to it.
+Why is it necessary to connect this to the circuit's ground point in order to
+make a measurement?
+
+Since voltage is measured across 2 points, we are essentially measuring the
+potential difference of the circuit relative to ground, which is why we need the
+ground connection in the first place.
+
+
+3. (1 point) If you have used the Horizontal Position control to move the
+trigger point horizontally so much that you can no longer see the trigger point
+on the screen, what is the quick way to restore the trigger point back to the
+middle of the screen?
+
+We can simply press the horizontal position knob near the top of the controls.
+
+

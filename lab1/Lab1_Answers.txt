@@ -1,0 +1,109 @@
+			      EE 109 - Fall 2021
+			  Lab 1 - Electronic Circuits
+
+Edit the document below to fill your answers from the exercises done in lab.
+Be sure to include the proper units, such as "1 kOhm", or "200 mV".
+
+Note: Don't use special characters like Greek "mu" or "Omega" symbols in your
+answers.  These don't display correctly on Vocareum and can make it hard to
+grade the answers.  For example, if you need to specify units of microseconds,
+just type "microseconds" or "usecs".
+
+
+1. (1 point) What voltage did the DMM measure?
+        DMM =  2.579V
+
+
+2. What are the values of the resistors?  List the values from smallest to
+   largest.
+   (1.5 points) From the color bands:
+	R1 =  240 ohms
+	R2 =  680 ohms
+	R3 =  1300 ohms
+         
+   (1.5 points) The measured values:
+        R1 =  238 ohms
+        R2 =  676 ohms
+        R3 =  1279 ohms
+
+
+3. (2 points) In the circuit with Vs=5V and resistors R1 and R2 in series what
+   are the CALCULATED voltages across them?
+        V1 =  1.30V
+        V2 =  3.70V
+
+
+4. (2 points) In the circuit with Vs=5V and resistors R1 and R2 in series what
+   are the MEASURED voltages across them?
+        V1 =  1.30V
+        V2 =  3.70V
+
+
+5. (1 points) What are the voltages (or range of voltages after watching for a
+few seconds) on the switch output when it is not pressed and when it is
+pressed?
+        Not pressed =  floating
+        Pressed =  0V
+
+
+6. (1 points) With resistor R2 added to the circuit, what are the voltages on
+   the switch output when it is not pressed and when it is pressed?
+        Not pressed =  5V
+        Pressed =  0V
+
+
+7. (2 points) Using the values you just measured for the voltages across R1 and
+R3, and the values you measured previously for those resistor values, use Ohm's
+Law to calculate the current that was passing through the resistors in both
+cases.
+                  Voltage     Resistance     Current
+        R1:        5.00V       238 ohms      0.021A
+        R3:        3.07V       1279 ohms     0.002A
+
+8. (2 points) What were the values that you measured with the DMM in current
+mode for the current flowing through the LED for both R1 or R3?
+	          Current
+	R1:       0.020A
+        R3:       0.002A
+
+
+			  ---- Review Questions ----
+
+1. (3 points) Given the digital circuit you built with the button, inverter and
+LED, suppose as you test it the output LED is always OFF regardless of the
+button position.  For each of the following possible explanations, write a
+sentence that explains why that issue would cause the LED to always be
+off.
+
+     a. VDD was not connected to the IC chips.
+        There is no power supply to operate the inverter to convert the Logic 0 to Logic 1, thus
+        disabling the LED from ever lighting up.
+
+     b. The ground connection for the button was not connected appropriately.
+        Because there is no ground connection on the LHS, current will always flow to the RHS toward
+        the IC. That constantly produces a Logic 1, which is inverted by the IC into a Logic 0, thus
+        never allowing the LED to light up.
+
+     c. The LED was plugged in backwards.
+        LED's only operate in a single direction (from anode to cathode).
+
+
+
+
+2. (2 points) Given two resistors Rlo and Rhi whose resistance values are such that Rlo < Rhi
+
+     a. If they are connected in series giving a series effective resistance of
+     Reff, which of the following is true?
+         Reff < Rlo
+         Rlo < Reff < Rhi
+         Rhi < Reff             true
+
+     b. If they are connected in parallel, giving a parallel effective
+     resistance of Reff, which of the following is true?
+         Reff < Rlo             true
+         Rlo < Reff < Rhi
+         Rhi < Reff
+
+
+3. (1 point) True or False: Ohm's Law applies to both LEDs and resistors.
+        False.

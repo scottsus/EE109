@@ -1,0 +1,19 @@
+			      EE 109 - Fall 2021
+		    Lab 7 - Rotary Encoders and Interrupts
+
+Edit the document below to fill in your answers to the review problems at the
+end of the assignment web page.
+
+
+1. (1 point) Briefly explain why it is undesirable to read the two encoder
+input signals with two separate PINC statements.
+There is a possibility that the time gap between reading the first and the second
+input signal happens to coincide with the change in state of the encoder input signals,
+causing erroneous readings for the input signal.
+
+
+2. (1 point) Briefly explain why updating the LCD display in your ISR could
+lead to undesirable behavior for this lab.
+Updating the LCD display is a time-consuming process. Given that an interrupt is undesirable
+to override another interrupt, updating the LCD in the ISR might potentially mean that
+another ISR would not be called during this period, thus leading to some loss of information.

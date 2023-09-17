@@ -1,0 +1,32 @@
+			      EE 109  - Fall 2021
+		       Lab 3 - Arduino Input and Output
+
+Edit the document below to fill in your answers to the review problems at the
+end of the assignment web page.
+
+1. (2 points) Suppose we relocated the three buttons from group B, bits 5-3 to
+group D, bits 5-3, noting that the LED is still attached to group D, bit 2.
+Assuming appropriate DDRD values, consider the following method of turning
+on the LED.
+
+    PORTD = 0x04; // turn on the LED
+
+Explain the problem with this approach and, in particular, what would stop
+working after the execution of that line of code.
+
+The 3 buttons would not be using their internal pull-up resistors and an external
+pull-up resistor set up would be required.
+
+
+
+2. (2 points) Briefly explain why the delay between the press of the 'C' button
+and the start of the LED on/off sequence varied when you took multiple
+measurements?  Think about the timing of how software executes.
+
+The way we detect the button press through checkInput() is in the while loop. In turn,
+the while loop is constantly looping over itself infinitely, eternally checking for the
+checkInput() to be true. When we press the button, we can be at any point in the loop.
+If we happened to press the button when the while loop has already passed over the
+checkInput() for that button, then we have to wait for another iteration of the loop for
+any code to execute. For that reason, there will be variations in the propagation delays.
+
